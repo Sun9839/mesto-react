@@ -1,0 +1,34 @@
+.profile__add{
+    background-image: url('../../../images/plus.svg');
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #FFFFFF;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.profile__add:hover{
+    opacity: 0.6;
+}
+@media screen and (min-width: 320px){
+    .profile__add{
+        margin-top: 36px;
+        width: 100%;
+        height: 50px;
+        background-size: 16px 16px;
+    }
+}
+@media screen and (min-width: 650px){
+    .profile__add{
+        width: 582px;
+        margin-left: -147px;
+        background-size: 22px 22px;
+    }
+}
+@media screen and (min-width: 980px){
+    .profile__add{
+        width: 150px;
+        margin-left: auto;
+    }
+}

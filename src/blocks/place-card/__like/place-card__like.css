@@ -1,0 +1,18 @@
+@import url('./_clicked/place-card__like_clicked.css');
+.place-card__like{
+    background-image: url('../../../images/like.svg');
+    background-position: center;
+    background-size: 20px 18px;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: #FFFFFF;
+    width: 20px;
+    height: 18px;
+    margin-top: 21px;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.place-card__like:hover{
+    opacity: 0.6;
+}
