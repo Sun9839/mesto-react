@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header';
-import Main from "./Main";
-import Footer from './Footer';
-import PopupWidthForm from "./PopupWidthForm";
-import ImagePopup from "./ImagePopup";
+import Header from './Header.js';
+import Main from "./Main.js";
+import Footer from './Footer.js';
+import PopupWidthForm from "./PopupWidthForm.js";
+import ImagePopup from "./ImagePopup.js";
 
 class App extends React.Component{
     constructor(props) {

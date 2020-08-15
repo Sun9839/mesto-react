@@ -6,4 +6,4 @@
 
 ### В стек используемых технологий входят: React, Javascript, HTML, CSS.
 
-### Ссылка на GitHubPages: https://sun9839.github.io/mesto/
+### Ссылка на GitHubPages: https://sun9839.github.io/mesto-react/
