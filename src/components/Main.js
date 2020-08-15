@@ -1,6 +1,6 @@
 import React from 'react';
 import {api} from "../utils/Api";
-import Card from "../utils/Card";
+import Card from "./Card";
 
 class Main extends React.Component{
     constructor(props) {
@@ -21,14 +21,14 @@ class Main extends React.Component{
                     userDescription: data.about
                 })
             }
-        );
+        ).catch((err) => {console.err(err)});
         api.getInitialCards().then(
             (data) => {
                 this.setState({
                     cards : data
                 })
             }
-        )
+        ).catch((err) => {console.err(err)});
     }
     render() {
         return(
