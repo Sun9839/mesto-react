@@ -1,20 +1,18 @@
 import React from "react";
 
-class PopupWidthForm extends React.Component {
-    render() {
-        return(
-            <section className={`popup ${this.props.isOpen && 'popup_opened'}`} id={this.props.popupSelector}>
-                <div className='popup__container'>
-                    <button className='popup__close' onClick={this.props.isClose} type='button'></button>
-                    <form className='popup__form' name={this.props.formName} noValidate>
-                        <h3 className='popup__title'>{this.props.title}</h3>
-                        {this.props.children}
-                        <button className='popup__save'>{this.props.buttonText}</button>
-                    </form>
-                </div>
-            </section>
-        );
-    }
+function PopupWidthForm (props){
+    return(
+        <section className={`popup ${props.isOpen && 'popup_opened'}`} id={props.popupSelector}>
+            <div className='popup__container'>
+                <button className='popup__close' onClick={props.isClose} type='button' />
+                <form className='popup__form' name={props.formName} noValidate>
+                    <h3 className='popup__title'>{props.title}</h3>
+                    {props.children}
+                    <button className='popup__save'>{props.buttonText}</button>
+                </form>
+            </div>
+        </section>
+    );
 }
 
 export default PopupWidthForm;

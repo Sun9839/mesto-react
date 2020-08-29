@@ -1,57 +1,39 @@
 import React from 'react';
-import {api} from "../utils/Api.js";
 import Card from "./Card.js";
+import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
-class Main extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            userName : 'Жак Ив-Кусто',
-            userDescription : 'Исследователь океана',
-            userAvatar : './images/Jak-Iv-Kusto.jpg',
-            cards : []
-        }
-    }
-    componentDidMount () {
-        api.getUser().then(
-            (data) => {
-                this.setState({
-                    userAvatar: data.avatar,
-                    userName: data.name,
-                    userDescription: data.about
-                })
-            }
-        ).catch((err) => {console.err(err)});
-        api.getInitialCards().then(
-            (data) => {
-                this.setState({
-                    cards : data
-                })
-            }
-        ).catch((err) => {console.err(err)});
-    }
-    render() {
-        return(
-            <>
-                <section className='profile'>
-                    <button className='profile__image-button' type='button' onClick={this.props.isEditAvatarPopupOpen} />
-                    <img className='profile__image' alt='фото профиля' src={this.state.userAvatar} />
-                    <div className='profile__info'>
-                        <h1 className='profile__name'>{this.state.userName}</h1>
-                        <p className='profile__activity'>{this.state.userDescription}</p>
-                        <button className='profile__edit' type='button' onClick={this.props.onEditProfile} />
-                    </div>
-                    <button className='profile__add' type='button' onClick={this.props.onAddPlace } />
-                </section>
+function Main (props){
+    const context = React.useContext(CurrentUserContext)
 
-                <section className='places-list'>
-                    {this.state.cards.map((data) => {
-                        return (<Card  onCardClick={this.props.imageClick} key={data._id} card={data} likes={data.likes} />)
-                    })}
-                </section>
-            </>
-        );
+    function clickImage(card){
+        props.onCardClick(card)
     }
+    return(
+        <>
+            <section className='profile'>
+                <button className='profile__image-button' type='button' onClick={props.isEditAvatarPopupOpen} />
+                <img className='profile__image' alt='фото профиля' src={context.avatar} />
+                <div className='profile__info'>
+                    <h1 className='profile__name'>{context.name}</h1>
+                    <p className='profile__activity'>{context.about}</p>
+                    <button className='profile__edit' type='button' onClick={props.onEditProfile} />
+                </div>
+                <button className='profile__add' type='button' onClick={props.onAddPlace } />
+            </section>
+
+            <section className='places-list'>
+                {props.cards.map((item) => {
+                    return (<Card
+                        handleCardLike={props.clickOnLike}
+                        onCardClick={clickImage}
+                        key={item._id}
+                        card={item}
+                        handleCardDelete={props.clickOnDeleteButton}
+                    />)
+                })}
+            </section>
+        </>
+    );
 }
 
 export default Main;
