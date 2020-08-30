@@ -1,4 +1,5 @@
 import React from "react";
+import PopupWidthForm from "./PopupWidthForm";
 
 export default function EditAvatarPopup(props){
     const avatarRef = React.useRef()
@@ -12,16 +13,19 @@ export default function EditAvatarPopup(props){
         avatarRef.current.value = ''
     },[avatarRef])
     return(
-        <section className={`popup ${props.isOpen && 'popup_opened'}`} id='avatar-popup' >
-            <div className='popup__container'>
-                <button className='popup__close' onClick={props.isClose} type='button' />
-                <form className='popup__form' onSubmit={handleSubmit} noValidate>
-                    <h3 className='popup__title'>Обновить аватар</h3>
-                    <input ref={avatarRef} autoComplete="off" type="url" className='popup__name' id='input-avatar' name='avatar' placeholder='Ссылка на аватар' required />
-                    <span className='popup__input-error' id='input-avatar-error'/>
-                    <button className='popup__save'>Сохранить</button>
-                </form>
-            </div>
-        </section>
+        <PopupWidthForm
+            isOpen={props.isOpen}
+            isClose={props.isClose}
+            popupSelector={'avatar-popup'}
+            title={'Обновить аватар'}
+            buttonText={'Сохранить'}
+            onSubmitImage={handleSubmit}
+            children={
+                <>
+                  <input ref={avatarRef} autoComplete="off" type="url" className='popup__name' id='input-avatar' name='avatar' placeholder='Ссылка на аватар' required />
+                  <span className='popup__input-error' id='input-avatar-error'/>
+                </>
+            }
+            />
     )
 }

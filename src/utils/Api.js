@@ -1,4 +1,4 @@
-class Api {
+class defaultApi {
     constructor({authorization,cardsUrl,userUrl}) {
         this._authorization = authorization;
         this._cardsUrl = cardsUrl;
@@ -84,7 +84,7 @@ class Api {
     }
 }
 
-export const api = new Api({
+export const api = new defaultApi({
     authorization: 'fe47d12a-65cb-489c-8a22-593f286d28c3',
     cardsUrl: 'https://mesto.nomoreparties.co/v1/cohort-13/cards/',
     userUrl: 'https://mesto.nomoreparties.co/v1/cohort-13/users/me'
