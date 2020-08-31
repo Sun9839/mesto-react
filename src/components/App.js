@@ -2,13 +2,13 @@ import React from 'react';
 import Header from './Header.js';
 import Main from "./Main.js";
 import Footer from './Footer.js';
-import PopupWidthForm from "./PopupWidthForm.js";
+import PopupWithForm from "./PopupWithForm.js";
 import AddPlacePopup from "./AddPlacePopup";
 import ImagePopup from "./ImagePopup.js";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import {CurrentUserContext} from "../contexts/currentUserContext";
-import{api} from "../utils/Api";
+import{api} from "../utils/api";
 
 function App(props){
     const [currentUser, setCurrentUser] = React.useState({});
@@ -96,15 +96,15 @@ function App(props){
                 <Header />
                 <Main cards={cards} clickOnLike={onLikeClick} clickOnDeleteButton={onDeleteButtonClick} onCardClick={handleCardPopup} onEditProfile={handleEditProfilePopup} onAddPlace={handleEditPlacePopup} isEditAvatarPopupOpen={handleEditAvatarClick} />
                 <Footer />
-                <EditProfilePopup onUpdateUser={updateUser} isClose={closeAllPopups} isOpen={editProfilePopup} />
+                <EditProfilePopup onUpdateUser={updateUser} onClose={closeAllPopups} isOpen={editProfilePopup} />
 
-                <AddPlacePopup onAddCard={addCard} isClose={closeAllPopups} isOpen={editPlacePopup} />
+                <AddPlacePopup onAddCard={addCard} onClose={closeAllPopups} isOpen={editPlacePopup} />
 
-                <PopupWidthForm buttonText={'Да'} isClose={closeAllPopups} isOpen={false} popupSelector="delete-popup" title="Вы уверены?" />
+                <PopupWithForm buttonText={'Да'} onClose={closeAllPopups} isOpen={false} popupSelector="delete-popup" title="Вы уверены?" />
 
-                <EditAvatarPopup onUpdateAvatar={updateAvatar} isClose={closeAllPopups} isOpen={editAvatarPopup} />
+                <EditAvatarPopup onUpdateAvatar={updateAvatar} onClose={closeAllPopups} isOpen={editAvatarPopup} />
 
-                <ImagePopup popupSelector="image-popup" card={selectedCard} isClose={closeAllPopups} isOpen={editCardPopup}/>
+                <ImagePopup popupSelector="image-popup" card={selectedCard} onClose={closeAllPopups} isOpen={editCardPopup}/>
             </div>
         </CurrentUserContext.Provider>
     );
