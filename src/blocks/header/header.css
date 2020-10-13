@@ -1,5 +1,10 @@
 @import url('./__logo/header__logo.css');
+@import url('./__email/header__email.css');
+@import url('./__link/header__link.css');
+@import url('./__link/_color/header__link_color_grey.css');
 .header{
+    display: flex;
+    flex-direction: row;
     border-bottom: 1px solid #545454;
     margin-right: auto;
     margin-left: auto;

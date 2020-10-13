@@ -1,0 +1,21 @@
+.form__route{
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media screen and (min-width: 320px){
+    .form__route{
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 15px;
+        padding-bottom: 42px;
+    }
+}
+@media screen and (min-width: 650px){
+    .form__route{
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 80px;
+    }
+}
