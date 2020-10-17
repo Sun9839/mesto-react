@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/mesto-react/static/css/main.b7cf567d.chunk.css",
-    "main.js": "/mesto-react/static/js/main.3062f0b0.chunk.js",
-    "main.js.map": "/mesto-react/static/js/main.3062f0b0.chunk.js.map",
-    "runtime-main.js": "/mesto-react/static/js/runtime-main.36fb0e45.js",
-    "runtime-main.js.map": "/mesto-react/static/js/runtime-main.36fb0e45.js.map",
-    "static/js/2.6e4763c2.chunk.js": "/mesto-react/static/js/2.6e4763c2.chunk.js",
-    "static/js/2.6e4763c2.chunk.js.map": "/mesto-react/static/js/2.6e4763c2.chunk.js.map",
-    "index.html": "/mesto-react/index.html",
-    "precache-manifest.2ff17823fd38c7e0cbe5738f33c89928.js": "/mesto-react/precache-manifest.2ff17823fd38c7e0cbe5738f33c89928.js",
-    "service-worker.js": "/mesto-react/service-worker.js",
-    "static/css/main.b7cf567d.chunk.css.map": "/mesto-react/static/css/main.b7cf567d.chunk.css.map",
-    "static/js/2.6e4763c2.chunk.js.LICENSE.txt": "/mesto-react/static/js/2.6e4763c2.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/mesto-react/static/media/rubish-container.efa6fb04.svg"
+    "main.css": "/static/css/main.9d25f94e.chunk.css",
+    "main.js": "/static/js/main.1685ff0c.chunk.js",
+    "main.js.map": "/static/js/main.1685ff0c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e8402bce.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e8402bce.js.map",
+    "static/js/2.bb19ef0f.chunk.js": "/static/js/2.bb19ef0f.chunk.js",
+    "static/js/2.bb19ef0f.chunk.js.map": "/static/js/2.bb19ef0f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.abf8ccc7a971679029271022e80ccb85.js": "/precache-manifest.abf8ccc7a971679029271022e80ccb85.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9d25f94e.chunk.css.map": "/static/css/main.9d25f94e.chunk.css.map",
+    "static/js/2.bb19ef0f.chunk.js.LICENSE.txt": "/static/js/2.bb19ef0f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/rubish-container.efa6fb04.svg",
+    "static/media/success.svg": "/static/media/success.e38b395c.svg",
+    "static/media/unsuccessful.svg": "/static/media/unsuccessful.f10ac534.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.36fb0e45.js",
-    "static/js/2.6e4763c2.chunk.js",
-    "static/css/main.b7cf567d.chunk.css",
-    "static/js/main.3062f0b0.chunk.js"
+    "static/js/runtime-main.e8402bce.js",
+    "static/js/2.bb19ef0f.chunk.js",
+    "static/css/main.9d25f94e.chunk.css",
+    "static/js/main.1685ff0c.chunk.js"
   ]
 }
